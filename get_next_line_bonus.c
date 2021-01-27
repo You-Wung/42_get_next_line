@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 20:33:53 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/26 20:12:29 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/26 21:14:44 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ static int	rtn(int ret, char **str)
 {
 	if (ret == -1)
 	{
-		free(*str);
+		if (**str)
+			free(*str);
 		return (-1);
 	}
 	return (ret == 0 ? 0 : 1);
@@ -58,9 +59,9 @@ int			get_next_line(int fd, char **line)
 	int			ret;
 
 	ret = 1;
-	*line = NULL;
 	if (fd < 0 || fd >= 1024 || BUFFER_SIZE < 1 || !line)
 		return (-1);
+	*line = NULL;
 	if (str[fd] == NULL)
 		if (((str[fd] = ft_strdup("")) == NULL))
 			return (rtn(-1, &str[fd]));

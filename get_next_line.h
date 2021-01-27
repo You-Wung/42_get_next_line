@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 20:40:14 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/26 16:15:19 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/27 12:06:21 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 100000
+#  define BUFFER_SIZE 10
 # endif
 
 # include <stdlib.h>
