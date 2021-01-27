@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 20:33:53 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/26 21:37:17 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/27 12:11:54 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	app(char **str, char **line, int ret)
 {
 	char	*fre;
 	char	*tmp;
-	
+
 	if (ret == -1)
 		return (rtn(ret, str));
 	tmp = ft_strchr(*str, '\n');
