@@ -16,8 +16,7 @@ static int	rtn(int ret, char **str)
 {
 	if (ret == -1)
 	{
-		if (**str)
-			free(*str);
+		free(*str);
 		return (-1);
 	}
 	return (ret == 0 ? 0 : 1);
